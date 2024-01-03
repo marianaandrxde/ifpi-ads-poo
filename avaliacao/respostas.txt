@@ -1,0 +1,32 @@
+RESPOSTAS AVALIAÇÃO POO
+
+1 - PODEMOS INSTANCIAR CLASSES ABSTRATAS? JUSTIFIQUE.
+R - NÃO. POIS SÓ FORNECEM UMA ESTRUTURA COMUM PARA QUE A IMPLEMENTAÇÃO SEJA FEITA, OBRIGATORIAMENTE, NAS CLASSES DERIVADAS. 
+
+2 - EXPLIQUE O QUE É NECESSÁRIO PARA QUE A COMPILAÇÃO DA CLASSE CONCRETA OCORRA SEM ERROS:
+
+abstract class ClasseAbstrata {
+abstract imprimaAlgo(): void ;
+}
+
+class ClasseConcreta extends
+ClasseAbstrata {
+}
+
+R - OBRIGATORIAMENTE, A ClasseConcreta DEVE FORNECER UMA IMPLEMENTAÇÃO PARA O MÉTODO imprimaAlgo DA ClasseAbstrata.
+
+3. Se uma classe que herda de uma abstrata e não implementa os seus métodos, o que ocorre?
+R - OCORRERÁ UM ERRO.
+Non-abstract class 'ClasseConcreta' does not implement all abstract members of 'ClasseAbstrata'ts(18052)
+algo.ts(2, 14): A classe não abstrata 'ClasseConcreta' não implementa o membro abstrato herdado 'imprimaAlgo' da classe 'ClasseAbstrata'.
+class ClasseConcreta
+
+5 - Não podemos aplicar o operador new em FiguraGeometrica, mas porque então
+podemos realizar o seguinte código de instanciação:
+
+abstract class FiguraGeometrica {
+//...
+}
+let figuras: FiguraGeometrica[] = new Array();
+
+R - DEVIDO À IMPOSSIBILIDADE DE INSTANCIAR DIRETAMENTE UMA CLASSE ABSTRATA
